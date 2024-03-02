@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>clear</title>
+    <!--메인css-->
+    <link rel="stylesheet" href="css/c_main.css">
+    <!--파비콘-->
+    <link rel="shortcut icon" href="images/favicon.jpg">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!--bx슬라이더 관련 css파일-->
+    <link rel="stylesheet" href="bxslider/dist/jquery.bxslider.css">
+    <!--bx슬라이더 관련 js파일-->
+    <script src="bxslider/dist/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+
+    <!--오른쪽상단글씨영역-->
+    <div id="top_right">
+        <ul class="left"></ul>
+
+        <ul class="right">
+            <li class="top_right_txt"><a href="#a">회원가입</a></li>
+            <li class="line"></li>
+            <li class="top_right_txt"><a href="#a">로그인</a></li>
+            <li class="line"></li>
+            <li class="top_right_txt"><a href="#a">주문조회</a></li>
+            <li class="line"></li>
+            <li class="top_right_txt"><a href="#a">최근본상품</a></li>
+            <li class="line"></li>
+            <li class="top_right_txt"><a href="#a">고객센터</a></li>
+        </ul>
+    </div>
+
+
+
+    <!--logo&nav영역-->
+    <div id="wrap_header">
+        <div id="header">
+
+            <div class="logo">
+                <p><a href="#a">clear</a></p>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li class="nav_txt">
+                        <a href="#a">컵</a>
+
+                        <ul class="sub">
+                            <li><a href="#a">고블렛</a></li>
+                            <li><a href="#a">버블컵</a></li>
+                            <li><a href="#a">세트</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav_txt"><a href="#a">보울</a></li>
+                    <li class="nav_txt"><a href="#a">플레이트</a></li>
+                    <li class="nav_txt"><a href="#a">화병</a></li>
+                    <li class="nav_txt"><a href="#a">테이블매트</a></li>
+                    <li class="nav_txt"><a href="#a">인센스홀더</a></li>
+                    <li class="nav_txt"><a href="#a">캔들스틱</a></li>
+                    <li class="nav_txt"><a href="#a">오브제</a></li>
+
+                    <li class="top_icons"><img src="images/top_icons.jpg" alt="검색창 버튼, 마이페이지 버튼, 장바구니 버튼" usemap="#top_icons"></li>
+
+                    <li class="ham" onclick="openMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </li>
+                </ul>
+
+                <map name="top_icons">
+                    <area shape="rect" coords="5,7,29,30" href="#a">
+                    <area shape="rect" coords="52,7,78,30" href="#a">
+                    <area shape="rect" coords="105,7,130,30" href="#a">
+                </map>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <!--모바일전용메뉴-->
+    <div id="mobileMenu" class="m_menu">
+        <p class="closebtn" onclick="closeMenu()">&times;</p>
+        <ul>
+            <li>
+                <a href="#a">컵</a>
+
+                <ul class="m_sub">
+                    <li><a href="#a">고블렛</a></li>
+                    <li><a href="#a">버블컵</a></li>
+                    <li><a href="#a">세트</a></li>
+                </ul>
+            </li>
+            <li><a href="#a">보울</a></li>
+            <li><a href="#a">플레이트</a></li>
+            <li><a href="#a">화병</a></li>
+            <li><a href="#a">테이블매트</a></li>
+            <li><a href="#a">인센스홀더</a></li>
+            <li><a href="#a">캔들스틱</a></li>
+            <li><a href="#a">오브제</a></li>
+            <li></li>
+        </ul>
+    </div>
+
+    
+    
+
+    <!--슬라이드배너-->
+    <div id="s_banner">
+        <ul class="slider">
+            <li><img src="images/main_pc_slide_img1.jpg" alt="메인배너 여러가지 색의 그릇들"></li>
+            <li><img src="images/main_pc_slide_img2.jpg" alt="겹쳐져있는 프릿 오발 보울들"></li>
+            <li><img src="images/main_pc_slide_img3.jpg" alt="유리로 만든 트리 오브제와 유리구슬들"></li>
+        </ul>
+    </div>
+
+    <!--모바일슬라이드배너-->
+    <div id="m_s_banner">
+        <ul class="slider">
+            <li><img src="images/main_m_slide_img1.jpg" alt="메인배너 여러가지 색의 그릇들"></li>
+            <li><img src="images/main_m_slide_img2.jpg" alt="겹쳐져있는 프릿 오발 보울들"></li>
+            <li><img src="images/main_m_slide_img3.jpg" alt="유리로 만든 트리 오브제와 유리구슬들"></li>
+        </ul>
+    </div>
+
+
+    
+    
+
+    <!--베스트상품영역-->
+    <div id="best">
+        <ul class="best_all">
+            <h2 class="sec_tit">best seller</h2>
+
+            <li>
+                <a class="on" href="#a">고블렛</a>
+
+                <ul class="on product">
+                    <li>
+                        <a href="#a">
+                            <img src="images/best1_img1.jpg" alt="푸쉬 고블렛">
+                            <p>푸시 고블렛</p>
+                            <strong>38,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#a">
+                            <img src="images/best1_img2.jpg" alt="풀 고블렛">
+                            <p>풀 고블렛</p>
+                            <strong>38,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="images/best1_img3.jpg" alt="노스탈기아 시리즈 고블렛">
+                            <p>노스탈기아 시리즈_고블렛 (3 colors)</p>
+                            <strong>130,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="images/best1_img4.jpg" alt="파스텔리 시리즈 고블렛">
+                            <p>파스텔리 시리즈_고블렛 (4 colors)</p>
+                            <strong>130,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#a">버블컵</a>
+
+                <ul class="product">
+                    <li>
+                        <a href="#a">
+                            <img src="images/best2_img1.jpg" alt="1단 핑크 버블컵">
+                            <p>버블컵 1단 (핑크)</p>
+                            <strong>29,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#a">
+                            <img src="images/best2_img2.jpg" alt="2단 핑크 버블컵">
+                            <p>버블컵 2단 (핑크)</p>
+                            <strong>33,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="images/best2_img3.jpg" alt="1단 버블컵">
+                            <p>버블컵 1단 (4 colors)</p>
+                            <strong>25,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="images/best2_img4.jpg" alt="2단 버블컵">
+                            <p>버블컵 2단 (4 colors)</p>
+                            <strong>28,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#a">화병</a>
+
+                <ul class="product">
+                    <li>
+                        <a href="#a">
+                            <img src="images/best3_img1.jpg" alt="리엔티크 블론 시리즈 화병3">
+                            <p>리:엔티크 블론 시리즈 화병 #3</p>
+                            <strong>98,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#a">
+                            <img src="images/best3_img2.jpg" alt="리엔티크 블론 시리즈 화병2">
+                            <p>리:엔티크 블론 시리즈 화병 #2</p>
+                            <strong>62,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="images/best3_img3.jpg" alt="리엔티크 블론 시리즈 화병1">
+                            <p>리:엔티크 블론 시리즈 화병 #1</p>
+                            <strong>52,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#a">인센스홀더</a>
+
+                <ul class="product">
+                    <li>
+                        <a href="#a">
+                            <img src="images/best4_img1.jpg" alt="주얼 인센스 홀더">
+                            <p>주얼 인센스 홀더</p>
+                            <strong>49,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#a">
+                            <img src="images/best4_img2.jpg" alt="베이직 인센스 홀더">
+                            <p>베이직 인센스 홀더</p>
+                            <strong>32,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="images/best4_img3.jpg" alt="물방울 인센스 홀더">
+                            <p>물방울 인센스 홀더</p>
+                            <strong>42,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#a">
+                            <img src="images/best4_img4.jpg" alt="매트 인센스 홀더">
+                            <p>매트 인센스 홀더</p>
+                            <strong>32,000원</strong>
+                        </a>
+                        <ul class="w_a_button">
+                            <li><span>wish</span></li>
+                            <li><span>add</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!--스페셜영역-->
+    <div id="special">
+        <ul class="special_all">
+            <h2 class="sec_tit">special</h2>
+
+            <ul>
+                <li>
+                    <a href="#a">
+                        <img src="images/main_special_img1.jpg" alt="파우더리 오발 플레이트">
+                        <p>powdery oval plate</p>
+                        <strong>자세히 살펴보기</strong>
+                        <span><img src="images/main_special_arrow.jpg" alt="자세히 살펴보기 화살표"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#a">
+                        <img src="images/main_special_img2.jpg" alt="풀 고블렛과 푸쉬 고블렛">
+                        <p>pull &amp; push glass cup</p>
+                        <strong>자세히 살펴보기</strong>
+                        <span><img src="images/main_special_arrow.jpg" alt="자세히 살펴보기 화살표"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="images/main_special_img3.jpg" alt="튜브 보틀과 컵 세트">
+                        <p>tube bottle &amp; cup</p>
+                        <strong>자세히 살펴보기</strong>
+                        <span><img src="images/main_special_arrow.jpg" alt="자세히 살펴보기 화살표"></span>
+                    </a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+
+
+    <!--신상품영역-->
+    <div id="new">
+        <ul class="new_all">
+            <h2 class="sec_tit">new arrivals</h2>
+
+            <ul class="product on">
+
+                <li>
+                    <a href="#a">
+                        <img src="images/new_img1.jpg" alt="핑크색 무늬 프릿 플레이트 SS">
+                        <p>프릿 플레이트 SS</p>
+                        <strong>62,000원</strong>
+                    </a>
+                    <ul class="w_a_button">
+                        <li><span>wish</span></li>
+                        <li><span>add</span></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#a">
+                        <img src="images/new_img2.jpg" alt="주황색 무늬 프릿 플레이트 S">
+                        <p>프릿 플레이트 S</p>
+                        <strong>45,000원</strong>
+                    </a>
+                    <ul class="w_a_button">
+                        <li><span>wish</span></li>
+                        <li><span>add</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="images/new_img3.jpg" alt="연두색 무늬 프릿 플레이트 L">
+                        <p>프릿 플레이트 L</p>
+                        <strong>108,000원</strong>
+                    </a>
+                    <ul class="w_a_button">
+                        <li><span>wish</span></li>
+                        <li><span>add</span></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#a">
+                        <img src="images/new_img4.jpg" alt="흰색 무늬 프릿 오발 플레이트 S">
+                        <p>프릿 오발 플레이트 S</p>
+                        <strong>95,000원</strong>
+                    </a>
+                    <ul class="w_a_button">
+                        <li><span>wish</span></li>
+                        <li><span>add</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="images/new_img5.jpg" alt="검정색 무늬 프릿 오발 플레이트 M">
+                        <p>프릿 오발 보울 M</p>
+                        <strong>118,000원</strong>
+                    </a>
+                    <ul class="w_a_button">
+                        <li><span>wish</span></li>
+                        <li><span>add</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+
+
+    <!--갤러리영역-->
+    <div id="gal">
+        <ul>
+            <li class="img1">
+                <a href="#a">
+                    <img src="images/main_img1.jpg" alt="꽃이 있는 화병과 컵들 1">
+                </a>
+            </li>
+
+            <li class="img2">
+                <a href="#a">
+                    <img src="images/main_img2.jpg" alt="꽃이 있는 화병과 컵들 2">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <!--푸터영역-->
+    <div id="wrap_footer">
+        <footer>
+            <p class="logo"><a href="#a">clear</a></p>
+
+            <ul class="left">
+                <li>
+                    <p><a href="#a">회사소개</a></p>
+                    <p><a href="#a">이용약관</a></p>
+                    <p><a href="#a">개인정보처리방침</a></p>
+                    <p><a href="#a">이용안내</a></p>
+                </li>
+                <li>
+                    <h3>쇼핑몰 기본정보</h3>
+                </li>
+                <li>
+                    <p><strong>상호명</strong> clear</p>
+                    <p><strong>대표자명</strong> 엄유림</p>
+                    <p><strong>대표 전화</strong> 010-9723-4909</p>
+                    <p><strong>사업자 등록번호</strong></p>
+                    <br>
+                    <p><strong>통신판매업 신고번호</strong></p>
+                    <p><strong>개인정보보호책임자</strong> 엄유림</p>
+
+                </li>
+            </ul>
+
+            <ul class="right one">
+                <li>
+                    <h3>고객센터 정보</h3>
+                </li>
+                <li>
+                    <p><strong>상담/주문 전화</strong> 010-9723-4909</p>
+                </li>
+                <li>
+                    <p><strong>상담/주문 이메일</strong> eyul0423@naver.com</p>
+                </li>
+                <li>
+                    <p><strong>CS운영시간</strong></p>
+                </li>
+            </ul>
+
+            <ul class="right">
+                <li>
+                    <h3>결제 정보</h3>
+                </li>
+                <li>
+                    <p><strong>무통장 계좌정보</strong><br> 은행 0000-000-00000</p>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+    <!--서브메뉴 실행-->
+    <script>
+        $(function() {
+
+            $("#header .nav > ul > li").hover(function() {
+                $(this).children("ul.sub").stop().slideDown();
+            }, function() {
+                $(this).children("ul.sub").stop().slideUp();
+            });
+
+        });
+
+    </script>
+    
+    
+    
+    <!--모바일전용메뉴 실행-->
+    <script>
+        function openMenu() {
+           
+            document.getElementById('mobileMenu').style.width="100%"; 
+        }
+        
+        function closeMenu() {
+            document.getElementById('mobileMenu').style.width="0px";
+        }
+        
+    </script>    
+    
+    
+    
+
+     <!--bx슬라이더 실행-->
+     <script>
+        $(document).ready(function() {
+            $(".slider").bxSlider({
+                auto: true,
+                touchEnabled: false
+            });
+        });
+    </script>
+
+
+
+
+
+    <!--베스트제품 실행-->
+    <script>
+        $(function() {
+
+            $("#best > ul > li > a").click(function() {
+                $("#best > ul > li > a").removeClass("on");
+                $(this).addClass("on");
+
+                $("#best > ul > li > ul").removeClass("on");
+                $(this).next("ul").addClass("on");
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
